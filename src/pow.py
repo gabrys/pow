@@ -18,7 +18,7 @@ class PowEnv:
         ".pow_files/pow_*.py",
     ]
     TERM = os.getenv("TERM")
-    UID = "{}".format(os.getuid())
+    UID = os.getenv("UID")
     USER = os.getenv("USER")
 
 
