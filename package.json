@@ -1,0 +1,12 @@
+{
+  "name": "pow",
+  "version": "1.0.0",
+  "description": "Pow is a CLI tool to run useful commands easily configurable via Pow files.",
+  "main": "index.js",
+  "repository": "git@github.com:gabrys/pow.git",
+  "author": "Piotr Gabryjeluk <piotr.gabryjeluk@shortlist.co>",
+  "license": "MIT",
+  "bin": {
+    "pow": "npm/pow-wrapper.js"
+  }
+}
