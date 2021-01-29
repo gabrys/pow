@@ -8,7 +8,7 @@ from pathlib import Path
 
 
 class PowEnv:
-    BASENAME = os.path.basename(sys.argv[0])
+    BASENAME = 'pow'
     CWD = os.getcwd()
     HOME = os.path.expanduser("~")
     POW_FILE_GLOBS = [
