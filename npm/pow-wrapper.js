@@ -16,6 +16,8 @@ function main() {
     cmd = path.join(package_dir, 'windows', 'pow-runner.dist', 'pow-runner.exe');
   } else if (process.platform === 'linux') {
     cmd = path.join(package_dir, 'linux', 'pow-runner');
+  } else if (process.platform === 'darwin') {
+    cmd = path.join(package_dir, 'macos', 'pow-runner');
   } else {
     // Bring your own Python
     cmd = 'python3';
