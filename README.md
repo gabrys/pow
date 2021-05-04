@@ -15,7 +15,6 @@ Pow is a CLI tool to run useful commands easily configurable via Pow files.
 Put the following in your `~/.pow_file.py`:
 
 ```python
-Pow = {}
 
 def pow_avg(args):
     """Calculate average of given integers"""
