@@ -10,20 +10,20 @@ Pow is a CLI tool to run useful commands easily configurable via Pow files.
 * Pow can be used to create wrappers for your workflow (you can wrap commands involving `aws`, `docker`, `git` or anything else)
 * Pow can be the way you share your scripts with others
 
-# Installation
-
-On Linux/macOS/WSL x86_64 there's an easy installer:
+# Easy installation on Linux, macOS, WSL (x86_64 only)
 
 ```
 $ curl -L https://raw.githubusercontent.com/gabrys/pow/main/pow-installer.sh > pow-installer.sh
 $ bash pow-installer.sh
 ```
 
-This will download pow-runner and pow.py and install it in one of the directories: `/usr/local/pow`, `/opt/pow` or `~/.pow` and then install an executable BASH script `pow` to a location in one of your directories listed in `PATH`.
+This will download `pow-runner` and `pow.py` from GitHub and install them in one of the directories: `/usr/local/pow`, `/opt/pow` or `~/.pow` (creating the directory if needed) and then install an executable BASH script `pow` to a location in one of your directories already listed in `PATH` (one of ~/.local/bin, ~/bin, /usr/local/bin, /usr/bin, /opt/bin).
 
 `pow-runner` is an executable that embeds Python 3.8.7 and is used to run `pow.py`.
 
-On Windows, Linux and macOS (x86_64), if you have Node.js installed, you can install it via `npm install -g https://github.com/gabrys/pow.git`. When running `pow` installed via `npm`, it launches via a JavaScript script, so there is some additional overhead when starting (on macOS quite noticable, consider using the installer above).
+# Easy installation via npm on on Windows, Linux, macOS (x86_64 only)
+
+You can install it via `npm install -g https://github.com/gabrys/pow.git`. When running `pow` installed via `npm`, it launches via a JavaScript script, so there is some additional overhead when starting (on macOS quite noticable, consider using the installer above).
 
 ## Example
 
