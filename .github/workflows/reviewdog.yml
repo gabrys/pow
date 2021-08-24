@@ -1,19 +1,16 @@
 name: black-action
 on: [pull_request]
 jobs:
-  linter_name:
+  black:
     name: runner / black
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Check files using the black formatter
-        uses: rickstaa/action-black@v1
-        id: action_black
+      - uses: actions/setup-python@v1
+      - uses: BSFishy/pip-action@v1
         with:
-          black_args: "src"
-      - name: Annotate diff changes using reviewdog
-        if: steps.action_black.outputs.is_formatted == 'true'
-        uses: reviewdog/action-suggester@v1
+          packages: black
+      - run: python3 -m black pipeline/
+      - uses: reviewdog/action-suggester@v1
         with:
-          tool_name: blackfmt
-          fail_on_error: true
+          tool_name: black
