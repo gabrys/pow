@@ -2,7 +2,7 @@ name: black-action
 on: [pull_request]
 jobs:
   black:
-    name: runner / black
+    name: runner / python / black
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -15,3 +15,17 @@ jobs:
         with:
           fail_on_error: true
           tool_name: black
+  modernize:
+    name: runner / python / modernize
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v1
+      - uses: BSFishy/pip-action@v1
+        with:
+          packages: modernize
+      - run: python3 -m modernize -n -w .
+      - uses: reviewdog/action-suggester@v1
+        with:
+          fail_on_error: true
+          tool_name: modernize
