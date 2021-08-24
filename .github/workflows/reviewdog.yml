@@ -10,7 +10,7 @@ jobs:
       - uses: BSFishy/pip-action@v1
         with:
           packages: black
-      - run: python3 -m black pipeline/
+      - run: python3 -m black ./
       - uses: reviewdog/action-suggester@v1
         with:
           tool_name: black
