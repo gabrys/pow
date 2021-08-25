@@ -88,8 +88,8 @@ Pow is one Python 3 file with no further dependencies. In order to make it indep
 ## Easy installation on Linux, macOS, WSL (x86_64 only)
 
 ```
-$ curl -L https://raw.githubusercontent.com/gabrys/pow/main/pow-installer.sh > pow-installer.sh
-$ bash pow-installer.sh
+$ curl -L https://raw.githubusercontent.com/gabrys/pow/main/pow-install.sh > pow-install.sh
+$ bash pow-install.sh
 ```
 
 This will download `pow-runner` and `pow.py` from GitHub and install them in one of the directories: `/usr/local/pow`, `/opt/pow` or `~/.pow` (creating the directory if needed) and then install an executable BASH script `pow` to a location in one of your directories already listed in `PATH` (one of ~/.local/bin, ~/bin, /usr/local/bin, /usr/bin, /opt/bin).
