@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 set -eo pipefail
-shopt -s nullglob globstar
+shopt -s nullglob
 
 pow_base_url="https://raw.githubusercontent.com/gabrys/pow/main"
 
