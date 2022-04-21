@@ -8,5 +8,7 @@
   "license": "MIT",
   "bin": {
     "pow": "npm/pow-wrapper.js"
-  }
+  },
+  "cpu": ["x64"],
+  "os": [ "linux", "win32" ]
 }
