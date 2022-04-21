@@ -28,9 +28,23 @@ def pow_build_linux(args):
         copy(Path(tmpdir) / "pow-runner", bindir)
 
 
-def pow_build_macos(args):
-    """Build pow-runner on MacOS"""
-    bindir = Path.cwd() / "macos"
+def pow_build_macos_intel(args):
+    """Build pow-runner on MacOS Intel"""
+    bindir = Path.cwd() / "macos-intel"
+    src = Path.cwd() / "src" / "pow-runner.py"
+    run(["pip3", "install", "pyinstaller"], check=True)
+    makedirs(bindir, exist_ok=True)
+    with TemporaryDirectory() as tmpdir:
+        run(
+            ["python3", "-m", "PyInstaller", "--onefile", src],
+            cwd=tmpdir,
+        )
+        copy(Path(tmpdir) / "dist" / "pow-runner", bindir)
+
+
+def pow_build_macos_m1(args):
+    """Build pow-runner on MacOS arm64 (M1)"""
+    bindir = Path.cwd() / "macos-arm64"
     src = Path.cwd() / "src" / "pow-runner.py"
     run(["pip3", "install", "pyinstaller"], check=True)
     makedirs(bindir, exist_ok=True)
