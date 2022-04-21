@@ -85,18 +85,13 @@ Pow will load any file in `pow_files/` named `pow_*.py` so you can put together 
 
 Pow is one Python 3 file with no further dependencies. In order to make it independent of system's installation of Python I created `pow-runner` which is an executable that embeds Python 3.8.7 and is used to run `pow.py`. It's precompiled for Linux, macOS and Windows (on Windows it's a bunch of files actually).
 
-## Easy installation on Linux, macOS, WSL (x86_64 only)
+## Easy installation via yarn on Windows and Linux (x86_64 only)
 
-```
-$ curl -L https://raw.githubusercontent.com/gabrys/pow/main/pow-install.sh > pow-install.sh
-$ bash pow-install.sh
-```
+You can install it via `sudo yarn global add https://github.com/gabrys/pow.git` (no sudo on Windows). When running `pow` installed via `npm`, it launches via a JavaScript script, so there is some additional overhead when starting.
 
-This will download `pow-runner` and `pow.py` from GitHub and install them in one of the directories: `/usr/local/pow`, `/opt/pow` or `~/.pow` (creating the directory if needed) and then install an executable BASH script `pow` to a location in one of your directories already listed in `PATH` (one of ~/.local/bin, ~/bin, /usr/local/bin, /usr/bin, /opt/bin).
+## Easy installation via yarn on Macs (Intel and M1)
 
-## Easy installation via npm on on Windows, Linux, macOS (x86_64 only)
-
-You can install it via `npm install -g https://github.com/gabrys/pow.git`. When running `pow` installed via `npm`, it launches via a JavaScript script, so there is some additional overhead when starting (on macOS quite noticable, consider using the installer above).
+You can install it via `sudo yarn global add https://github.com/gabrys/pow-macos.git` (note, another GitHub repo!). When running `pow` installed via `npm`, it launches via a BASH script, and the overhead when starting is minimal.
 
 ## Any other platform with Python 3.8+
 
